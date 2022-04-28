@@ -1,0 +1,58 @@
+﻿
+
+@{
+    ViewBag.Title = "partial1";
+    Layout = "~/Views/Shared/_YeniLayout.cshtml";
+}
+
+<div class="login-form login-form-left">
+
+    <div class="agile-row">
+
+     
+       
+
+        <br />
+        <br />
+        <h1 class="btn btn-default" style="margin-left:700px;font-size:20px;">📝  Kayıt Ol</h1>
+        <br />
+        <br />
+        <div class="login-agileits-top" style="margin-left:500px;font-size:18px;">
+            <form method="post" ">
+                @*<input type="text" class="form-control" name="vatAd" Placeholder="Firma Adınız" required="" />
+                <br />*@
+                <input type="text" class="form-control" name="vatEmail" Placeholder="Kullanıcı Adınız/Email Adresiniz" required="" style="max-width:50% " />
+                <br />
+                <br />
+
+
+
+                <input type="password" class="form-control" name="vatParola" Placeholder="Sıfre" required="" style="max-width:50%" />
+                <br />
+                <br />
+                <input type="text" class="form-control" name="TelefonNo" Placeholder="Telefon Numaranız" required="" style="max-width:50%" />
+                <br />
+
+
+                <br />
+                @*<div class="login-check">
+                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> <a href="#"> &amp;Beni Hatırla</a></label>
+                </div>*@
+                <br />
+                <input class="btn btn-primary" style="margin-left:00px;font-size:18px;" type="submit" value="Kayıt Ol">
+                <input type="text" name="Role" value="Kullanıcı" style="width:0px;" />
+                <br />
+                <br />
+                <p>
+                    Hesabınız  varsa Giriş yap
+                    <li class="badge btn-info"><a href="~/Security/Login/" style="color:white;font-size:18px;">< Giriş yap</a></li>
+                </p>
+
+                <br />
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

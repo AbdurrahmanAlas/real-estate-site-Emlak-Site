@@ -1,0 +1,73 @@
+﻿<ul class="nav navbar-nav navbar-right">
+
+
+    @if (Request.IsAuthenticated)
+    {
+        if (this.User.IsInRole("Kullanıcı"))
+
+        {
+
+    <ul>
+        
+        <div class="nav navbar-nav navbar-right" style="font-size:15px;">
+  <a href="/Ilan/Index" style="color:black;font-size:15px;" class="icon-user-check"><b>@User.Identity.Name</b></a>
+
+  
+            <a href="/Security/LogOut" class="badge badge-danger icon-exit">
+                Çıkış
+            </a>
+            <a href="/Ilan/Create" class="badge badge-success icon-plus" style="font-size: 12px;margin-right:50px;">Kayıt Ekle</a>
+        </div>
+    </ul>
+
+        }
+        else
+
+
+        {
+    <ul>
+        <li>
+
+            <div class="nav navbar-nav navbar-right" style="padding:10px;font-size:15px;">
+                <a href="/Ilan/Index" style="color:black;font-size:15px; " class="icon-user-check"> @User.Identity.Name</a>
+
+
+                <a href="/Admin/Index" style="color:white;font-size:15px; " class="badge badge-primary icon-user">Admin </a>
+
+
+
+                <a href="~/Security/LogOut" class="badge badge-danger icon-exit" style="font-size:13px;">
+                    Çıkış
+                </a>
+                <a href="/Ilan/Create" style="font-size:14px;margin-right:50px;" class="badge badge-success icon-plus">Kayıt Ekle</a>
+
+
+            </div>
+        </li>
+    </ul>
+
+
+
+
+
+    
+        }
+    }
+    else
+    { 
+
+        <div class="nav navbar-nav navbar-right" style="padding:10px">
+         <a href="/Security/partial1" class="badge badge-primary icon-user-plus" style="font-size:12px;margin-right:40px;" >Üye ol</a><br />
+            <a href="/Security/Login" style="font-size:16px;" class="badge badge-secondary icon-lock-open">
+                
+                Giriş
+            </a><br />
+            <a href="/Ilan/Create" style="font-size:11px;" class="badge badge-success icon-plus">Kayıt Ekle</a>
+        </div>
+
+
+    }
+
+
+
+</ul>

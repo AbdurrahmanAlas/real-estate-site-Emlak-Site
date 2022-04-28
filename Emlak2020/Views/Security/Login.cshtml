@@ -1,0 +1,83 @@
+﻿@model Emlak2020.Models.Kullanıcı
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_YeniLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+
+
+
+<br />
+<div style="margin-left:500px;font-size:10px;">
+
+
+
+
+
+
+
+    <br />
+    <div class="form-group last mb-6">
+
+        <br />
+
+        <br />
+        <h2 style="font-size:24px;">♠  Giris yap</h2>
+        <br />
+        @ViewBag.mesaj
+        @using (Html.BeginForm("Login", "Security", FormMethod.Post))
+        {
+
+            @*<div style="margin-left:70px;"> <img src="~/Content/ımage/kayıt1.jpg" alt="" style="width:180px;height:140px;"></div>*@
+
+            <div class="form-group last mb-6">
+
+                <div class="group">
+                    <i class="fas fa-user"></i>
+
+                      @Html.TextBoxFor(m => m.vatEmail, new { @class = "form-control", placeholder = "Kullanıcı Adı", style = "max-width:50%" })
+                </div>
+            </div>
+            <br />
+            <div class=" w3l-form-group">
+
+                <div class="group">
+                    <i class="fas fa-unlock"></i>
+
+                    @Html.TextBoxFor(m => m.vatParola, new { @class = "form-control", placeholder = "Şifre", style = "max-width:50%" })
+                </div>
+            </div>
+            <br />
+            <button type="submit" style="margin-left:50px;font-size:18px;" class="btn btn-primary">Giris yap</button>
+            <br />
+            <div class="forgot">
+                <a href="#" style="margin-left:50px;font-size:18px;">Şifremi unuttum</a>
+                <br />
+                <p><input type="checkbox" style="margin-left:50px;font-size:18px;">Beni hatırla</p>
+            </div>
+
+            <br />
+
+        }
+        <br />
+        <p>
+            Bir hesabınız yok mu?
+            <li class="btn btn-info"><a href="~/Security/partial1/" style="color:white">< Kayıt Ol</a></li>
+        </p>
+
+
+        <br /><br />
+        <br /><br />
+        <br />
+
+    </div>
+
+
+
+</div>
+
+
+

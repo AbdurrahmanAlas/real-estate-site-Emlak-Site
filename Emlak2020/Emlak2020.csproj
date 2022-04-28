@@ -43,7 +43,43 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -88,19 +124,538 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\1.jpg" />
+    <Content Include="Content\10.jpg" />
+    <Content Include="Content\11.jpg" />
+    <Content Include="Content\12.jpg" />
+    <Content Include="Content\2.jpg" />
+    <Content Include="Content\3.jpg" />
+    <Content Include="Content\3.png" />
+    <Content Include="Content\4.jpg" />
+    <Content Include="Content\5.jpg" />
+    <Content Include="Content\6.jpg" />
+    <Content Include="Content\7.jpg" />
+    <Content Include="Content\8.jpg" />
+    <Content Include="Content\9.jpg" />
+    <Content Include="Content\account-box-multiple.png" />
+    <Content Include="Content\account-plus.png" />
+    <Content Include="Content\analiz.jpg" />
+    <Content Include="Content\asd.png" />
+    <Content Include="Content\beyanname.jpg.jpg" />
+    <Content Include="Content\bina arka.jpg" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bullhorn %281%29.png" />
+    <Content Include="Content\Ekran Görüntüsü %28322%29.png" />
+    <Content Include="Content\Ekran Görüntüsü %28339%29.png" />
+    <Content Include="Content\emisyon.jpg" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\ew.jpg" />
+    <Content Include="Content\face.png" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\g1.jpg" />
+    <Content Include="Content\git.png" />
+    <Content Include="Content\haf2.jpg" />
+    <Content Include="Content\hisseli-tapu-örneği.jpg" />
+    <Content Include="Content\imardurumu.jpg" />
+    <Content Include="Content\in.png" />
+    <Content Include="Content\ins.jpg" />
+    <Content Include="Content\is.jpg" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\npm.js" />
+    <Content Include="Content\karayolları.jpg.jpg" />
+    <Content Include="Content\logo.jpg" />
+    <Content Include="Content\magnify-plus %281%29.png" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\tapu.jpg" />
+    <Content Include="Content\tc.jpg" />
+    <Content Include="Content\tw.png" />
+    <Content Include="Content\WhatsApp Image 2021-07-02 at 20.01.44.jpeg" />
+    <Content Include="Content\WhatsApp Image 2021-07-02 at 20.02.43.jpeg" />
+    <Content Include="Content\WP.png" />
+    <Content Include="Content\Yapı-ruhsatı-örneği.jpg" />
+    <Content Include="Content\you.jpg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Pages\Detay.html" />
+    <Content Include="Pages\index.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Template\homestate\agent.html" />
+    <Content Include="Template\homestate\blog.html" />
+    <Content Include="Template\homestate\contact.html" />
+    <Content Include="Template\homestate\css\animate.css" />
+    <Content Include="Template\homestate\css\bootstrap-datepicker.min.css" />
+    <Content Include="Template\homestate\css\bootstrap.css" />
+    <Content Include="Template\homestate\css\cs-select.css" />
+    <Content Include="Template\homestate\css\cs-skin-border.css" />
+    <Content Include="Template\homestate\css\flexslider.css" />
+    <Content Include="Template\homestate\css\icomoon.css" />
+    <Content Include="Template\homestate\css\magnific-popup.css" />
+    <Content Include="Template\homestate\css\style.css" />
+    <Content Include="Template\homestate\css\superfish.css" />
+    <Content Include="Template\homestate\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon.svg" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\demo-files\demo.css" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\demo-files\demo.js" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\demo.html" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\fonts\icomoon.svg" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\Read Me.txt" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\style.css" />
+    <Content Include="Template\homestate\images\cover_bg_1.jpg" />
+    <Content Include="Template\homestate\images\cover_bg_2.jpg" />
+    <Content Include="Template\homestate\images\hero.jpg" />
+    <Content Include="Template\homestate\images\img_bg_1.jpg" />
+    <Content Include="Template\homestate\images\img_bg_2.jpg" />
+    <Content Include="Template\homestate\images\img_bg_3.jpg" />
+    <Content Include="Template\homestate\images\loader.gif" />
+    <Content Include="Template\homestate\images\loc.png" />
+    <Content Include="Template\homestate\images\property-1.jpg" />
+    <Content Include="Template\homestate\images\property-2.jpg" />
+    <Content Include="Template\homestate\images\property-3.jpg" />
+    <Content Include="Template\homestate\images\property-4.jpg" />
+    <Content Include="Template\homestate\images\property-5.jpg" />
+    <Content Include="Template\homestate\images\property-6.jpg" />
+    <Content Include="Template\homestate\images\user-1.jpg" />
+    <Content Include="Template\homestate\images\user-2.jpg" />
+    <Content Include="Template\homestate\images\user-3.jpg" />
+    <Content Include="Template\homestate\images\user-4.jpg" />
+    <Content Include="Template\homestate\index.html" />
+    <Content Include="Template\homestate\js\bootstrap-datepicker.min.js" />
+    <Content Include="Template\homestate\js\bootstrap.min.js" />
+    <Content Include="Template\homestate\js\classie.js" />
+    <Content Include="Template\homestate\js\google_map.js" />
+    <Content Include="Template\homestate\js\hoverIntent.js" />
+    <Content Include="Template\homestate\js\jquery.easing.1.3.js" />
+    <Content Include="Template\homestate\js\jquery.flexslider-min.js" />
+    <Content Include="Template\homestate\js\jquery.min.js" />
+    <Content Include="Template\homestate\js\jquery.waypoints.min.js" />
+    <Content Include="Template\homestate\js\main.js" />
+    <Content Include="Template\homestate\js\modernizr-2.6.2.min.js" />
+    <Content Include="Template\homestate\js\respond.min.js" />
+    <Content Include="Template\homestate\js\selectFx.js" />
+    <Content Include="Template\homestate\js\sticky.js" />
+    <Content Include="Template\homestate\js\superfish.js" />
+    <Content Include="Template\homestate\properties.html" />
+    <Content Include="Template\homestate\README.txt" />
+    <Content Include="Template\__MACOSX\homestate\._agent.html" />
+    <Content Include="Template\__MACOSX\homestate\._blog.html" />
+    <Content Include="Template\__MACOSX\homestate\._contact.html" />
+    <Content Include="Template\__MACOSX\homestate\._index.html" />
+    <Content Include="Template\__MACOSX\homestate\._properties.html" />
+    <Content Include="Template\__MACOSX\homestate\._README.txt" />
+    <Content Include="Template\__MACOSX\homestate\css\._animate.css" />
+    <Content Include="Template\__MACOSX\homestate\css\._bootstrap-datepicker.min.css" />
+    <Content Include="Template\__MACOSX\homestate\css\._bootstrap.css" />
+    <Content Include="Template\__MACOSX\homestate\css\._cs-select.css" />
+    <Content Include="Template\__MACOSX\homestate\css\._cs-skin-border.css" />
+    <Content Include="Template\__MACOSX\homestate\css\._flexslider.css" />
+    <Content Include="Template\__MACOSX\homestate\css\._icomoon.css" />
+    <Content Include="Template\__MACOSX\homestate\css\._magnific-popup.css" />
+    <Content Include="Template\__MACOSX\homestate\css\._style.css" />
+    <Content Include="Template\__MACOSX\homestate\css\._superfish.css" />
+    <Content Include="Template\__MACOSX\homestate\fonts\bootstrap\._glyphicons-halflings-regular.svg" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\._icomoon.svg" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\._demo.html" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\._Read Me.txt" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\._style.css" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\demo-files\._demo.css" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\demo-files\._demo.js" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\fonts\._icomoon.svg" />
+    <Content Include="Template\__MACOSX\homestate\images\._cover_bg_1.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._cover_bg_2.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._hero.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._img_bg_1.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._img_bg_2.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._img_bg_3.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._loader.gif" />
+    <Content Include="Template\__MACOSX\homestate\images\._loc.png" />
+    <Content Include="Template\__MACOSX\homestate\images\._property-1.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._property-2.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._property-3.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._property-4.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._property-5.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._property-6.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._user-1.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._user-2.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._user-3.jpg" />
+    <Content Include="Template\__MACOSX\homestate\images\._user-4.jpg" />
+    <Content Include="Template\__MACOSX\homestate\js\._bootstrap-datepicker.min.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._bootstrap.min.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._classie.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._google_map.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._hoverIntent.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._jquery.easing.1.3.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._jquery.flexslider-min.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._jquery.min.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._jquery.waypoints.min.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._main.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._modernizr-2.6.2.min.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._respond.min.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._selectFx.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._sticky.js" />
+    <Content Include="Template\__MACOSX\homestate\js\._superfish.js" />
+    <Content Include="web\css1\slider.css" />
+    <Content Include="web\css1\style.css" />
+    <Content Include="web\css\bootstrap.css" />
+    <Content Include="web\css\fontawesome-all.min.css" />
+    <Content Include="web\css\style.css" />
+    <Content Include="web\fonts\fontawesome-webfont.svg" />
+    <Content Include="web\images\arrows.png" />
+    <Content Include="web\images\but.png" />
+    <Content Include="web\index.html" />
+    <Content Include="web\js\jquery.min.js" />
+    <Content Include="web\js\responsiveslides.min.js" />
+    <Content Include="web\w3layouts-License.txt" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="web\fonts\fontawesome-webfont.woff" />
+    <Content Include="web\fonts\fontawesome-webfont.woff2" />
+    <Content Include="web\fonts\FontAwesome.otf" />
+    <Content Include="web\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="web\fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup1.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DurumController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IlanController.cs" />
+    <Compile Include="Controllers\MahalleController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
+    <Compile Include="Controllers\SehirController.cs" />
+    <Compile Include="Controllers\SemtController.cs" />
+    <Compile Include="Controllers\TipController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Identity\ApplicationRole.cs" />
+    <Compile Include="Identity\ApplicationUser.cs" />
+    <Compile Include="Identity\IdentityDataContext.cs" />
+    <Compile Include="Identity\IdentityInitializer.cs" />
+    <Compile Include="Migrations\202203201137587_mig.cs" />
+    <Compile Include="Migrations\202203201137587_mig.Designer.cs">
+      <DependentUpon>202203201137587_mig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\DataInitializer.cs" />
+    <Compile Include="Models\Durum.cs" />
+    <Compile Include="Models\Kullanıcı.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Mahalle.cs" />
+    <Compile Include="Models\ProfilGuncelleme.cs" />
+    <Compile Include="Models\Register.cs" />
+    <Compile Include="Models\Resim.cs" />
+    <Compile Include="Models\Sehir.cs" />
+    <Compile Include="Models\Semt.cs" />
+    <Compile Include="Models\SifreDegistirme.cs" />
+    <Compile Include="Models\Tip.cs" />
+    <Compile Include="Models\Ilan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\PersonelRoleProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Content\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Detay.cshtml" />
+    <Content Include="Views\Home\Slider.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Shared\LoginPartial.cshtml" />
+    <Content Include="Views\Account\Profil.cshtml" />
+    <Content Include="Views\Account\Update.cshtml" />
+    <Content Include="Views\Account\SifreDegistir.cshtml" />
+    <Content Include="Views\Sehir\Create.cshtml" />
+    <Content Include="Views\Sehir\Delete.cshtml" />
+    <Content Include="Views\Sehir\Details.cshtml" />
+    <Content Include="Views\Sehir\Edit.cshtml" />
+    <Content Include="Views\Sehir\Index.cshtml" />
+    <Content Include="Views\Durum\Create.cshtml" />
+    <Content Include="Views\Durum\Delete.cshtml" />
+    <Content Include="Views\Durum\Details.cshtml" />
+    <Content Include="Views\Durum\Edit.cshtml" />
+    <Content Include="Views\Durum\Index.cshtml" />
+    <Content Include="Views\Tip\Create.cshtml" />
+    <Content Include="Views\Tip\Delete.cshtml" />
+    <Content Include="Views\Tip\Details.cshtml" />
+    <Content Include="Views\Tip\Edit.cshtml" />
+    <Content Include="Views\Tip\Index.cshtml" />
+    <Content Include="Views\Ilan\Create.cshtml" />
+    <Content Include="Views\Ilan\Delete.cshtml" />
+    <Content Include="Views\Ilan\Details.cshtml" />
+    <Content Include="Views\Ilan\Edit.cshtml" />
+    <Content Include="Views\Ilan\Index.cshtml" />
+    <Content Include="Views\Shared\SemtPartial.cshtml" />
+    <Content Include="Views\Shared\MahallePartial.cshtml" />
+    <Content Include="Views\Shared\TipPartial.cshtml" />
+    <Content Include="Views\Semt\Create.cshtml" />
+    <Content Include="Views\Semt\Delete.cshtml" />
+    <Content Include="Views\Semt\Details.cshtml" />
+    <Content Include="Views\Semt\Edit.cshtml" />
+    <Content Include="Views\Semt\Index.cshtml" />
+    <Content Include="Views\Mahalle\Create.cshtml" />
+    <Content Include="Views\Mahalle\Delete.cshtml" />
+    <Content Include="Views\Mahalle\Details.cshtml" />
+    <Content Include="Views\Mahalle\Edit.cshtml" />
+    <Content Include="Views\Mahalle\Index.cshtml" />
+    <Content Include="Views\Ilan\Images.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\Shared\Arama.cshtml" />
+    <Content Include="Views\Home\PartialFiltre.cshtml" />
+    <Content Include="Views\Home\Filtre.cshtml" />
+    <Content Include="Views\Home\MenuFiltre.cshtml" />
+    <Content Include="Views\Tip\DurumTip1.cshtml" />
+    <Content Include="Views\Tip\DurumTip2.cshtml" />
+    <Content Include="Views\Durum\Durum.cshtml" />
+    <Content Include="Views\Home\DurumList.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\IlanListesi.cshtml" />
+    <Content Include="Views\Tip\DurumAd1.cshtml" />
+    <Content Include="Views\Tip\DurumAd2.cshtml" />
+    <Content Include="Views\Security\Login.cshtml" />
+    <Content Include="Views\Security\partial1.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_YeniLayout.cshtml" />
+    <Content Include="Template\homestate\.DS_Store" />
+    <Content Include="Template\homestate\css\.DS_Store" />
+    <Content Include="Template\homestate\css\bootstrap.css.map" />
+    <Content Include="Template\homestate\css\style.css.map" />
+    <Content Include="Template\homestate\fonts\.DS_Store" />
+    <Content Include="Template\homestate\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="Template\homestate\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="Template\homestate\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="Template\homestate\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="Template\homestate\fonts\icomoon\.DS_Store" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon.eot" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon.ttf" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon.woff" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\.DS_Store" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\fonts\icomoon.eot" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\fonts\icomoon.ttf" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\fonts\icomoon.woff" />
+    <Content Include="Template\homestate\fonts\icomoon\icomoon\selection.json" />
+    <Content Include="Template\homestate\images\.DS_Store" />
+    <Content Include="Template\homestate\js\.DS_Store" />
+    <Content Include="Template\homestate\sass\.DS_Store" />
+    <Content Include="Template\homestate\sass\bootstrap.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_alerts.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_center-block.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_forms.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_grid.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_hide-text.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_image.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_labels.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_nav-vertical-align.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_opacity.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_panels.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_progress-bar.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_reset-filter.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_resize.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_responsive-visibility.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_size.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_tab-focus.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_text-overflow.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\mixins\_vendor-prefixes.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_alerts.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_badges.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_breadcrumbs.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_button-groups.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_buttons.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_carousel.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_close.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_code.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_component-animations.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_dropdowns.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_forms.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_glyphicons.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_grid.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_input-groups.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_jumbotron.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_labels.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_list-group.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_media.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_mixins.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_modals.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_navbar.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_navs.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_normalize.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_pager.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_pagination.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_panels.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_popovers.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_print.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_progress-bars.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_responsive-embed.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_responsive-utilities.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_scaffolding.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_tables.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_theme.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_thumbnails.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_tooltip.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_type.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_utilities.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_variables.scss" />
+    <Content Include="Template\homestate\sass\bootstrap\_wells.scss" />
+    <Content Include="Template\homestate\sass\style.scss" />
+    <Content Include="Template\homestate\sass\_bootstrap-compass.scss" />
+    <Content Include="Template\homestate\sass\_bootstrap-mincer.scss" />
+    <Content Include="Template\homestate\sass\_bootstrap-sprockets.scss" />
+    <Content Include="Template\__MACOSX\homestate\._.DS_Store" />
+    <Content Include="Template\__MACOSX\homestate\._css" />
+    <Content Include="Template\__MACOSX\homestate\._fonts" />
+    <Content Include="Template\__MACOSX\homestate\._images" />
+    <Content Include="Template\__MACOSX\homestate\._js" />
+    <Content Include="Template\__MACOSX\homestate\._sass" />
+    <Content Include="Template\__MACOSX\homestate\css\._.DS_Store" />
+    <Content Include="Template\__MACOSX\homestate\css\._bootstrap.css.map" />
+    <Content Include="Template\__MACOSX\homestate\css\._style.css.map" />
+    <Content Include="Template\__MACOSX\homestate\fonts\._.DS_Store" />
+    <Content Include="Template\__MACOSX\homestate\fonts\._bootstrap" />
+    <Content Include="Template\__MACOSX\homestate\fonts\._icomoon" />
+    <Content Include="Template\__MACOSX\homestate\fonts\bootstrap\._glyphicons-halflings-regular.eot" />
+    <Content Include="Template\__MACOSX\homestate\fonts\bootstrap\._glyphicons-halflings-regular.ttf" />
+    <Content Include="Template\__MACOSX\homestate\fonts\bootstrap\._glyphicons-halflings-regular.woff" />
+    <Content Include="Template\__MACOSX\homestate\fonts\bootstrap\._glyphicons-halflings-regular.woff2" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\._.DS_Store" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\._icomoon" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\._icomoon.eot" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\._icomoon.ttf" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\._icomoon.woff" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\._.DS_Store" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\._demo-files" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\._fonts" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\._selection.json" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\fonts\._icomoon.eot" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\fonts\._icomoon.ttf" />
+    <Content Include="Template\__MACOSX\homestate\fonts\icomoon\icomoon\fonts\._icomoon.woff" />
+    <Content Include="Template\__MACOSX\homestate\images\._.DS_Store" />
+    <Content Include="Template\__MACOSX\homestate\js\._.DS_Store" />
+    <Content Include="Template\__MACOSX\homestate\sass\._.DS_Store" />
+    <Content Include="Template\__MACOSX\homestate\sass\._bootstrap" />
+    <Content Include="Template\__MACOSX\homestate\sass\._bootstrap.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\._style.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\.__bootstrap-compass.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\.__bootstrap-mincer.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\.__bootstrap-sprockets.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\._mixins" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__alerts.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__badges.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__breadcrumbs.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__button-groups.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__buttons.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__carousel.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__close.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__code.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__component-animations.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__dropdowns.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__forms.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__glyphicons.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__grid.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__input-groups.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__jumbotron.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__labels.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__list-group.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__media.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__mixins.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__modals.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__navbar.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__navs.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__normalize.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__pager.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__pagination.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__panels.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__popovers.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__print.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__progress-bars.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__responsive-embed.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__responsive-utilities.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__scaffolding.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__tables.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__theme.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__thumbnails.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__tooltip.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__type.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__utilities.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__variables.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\.__wells.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__alerts.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__background-variant.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__border-radius.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__buttons.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__center-block.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__clearfix.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__forms.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__gradients.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__grid-framework.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__grid.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__hide-text.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__image.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__labels.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__list-group.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__nav-divider.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__nav-vertical-align.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__opacity.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__pagination.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__panels.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__progress-bar.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__reset-filter.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__reset-text.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__resize.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__responsive-visibility.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__size.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__tab-focus.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__table-row.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__text-emphasis.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__text-overflow.scss" />
+    <Content Include="Template\__MACOSX\homestate\sass\bootstrap\mixins\.__vendor-prefixes.scss" />
+    <Content Include="Views\Home\Kiralık.cshtml" />
+    <Content Include="Views\Home\DurumTip1.cshtml" />
+    <Content Include="Views\Home\DurumTip11.cshtml" />
+    <Content Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,8 +665,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202203201137587_mig.resx">
+      <DependentUpon>202203201137587_mig.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

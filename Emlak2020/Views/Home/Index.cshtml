@@ -1,0 +1,258 @@
+﻿
+@model  IEnumerable<Emlak2020.Models.Ilan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+ <div class="row card-success card-outline">
+    <!--slider-->
+    <div class=" col-md-6" style="color:blue;background-color:white;font-size:500px;">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <!-- Wrapper for slides -->
+
+           
+            <div class="carousel-inner card-success card-outline" role="listbox" style="margin-left:2px; border:unset">
+                @Html.Action("Slider", "Home")
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
+    <div class="col-md-6"><b>
+    @Html.Action("PartialFiltre", "Home")
+</b>  
+    </div>
+    @*<div class="col-md-6">@Html.Action("PartialFiltre", "Home")</div>*@
+
+
+</div>
+
+
+
+
+
+
+@*<div id="fh5co-popular-properties" class="fh5co-section-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                    <h3>Popular Properties</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var ılan in Model.Ilans)
+                {
+                    var d = 1;
+
+                    foreach (var kiralık in ViewBag.kiralık)
+                    {
+                        if (kiralık.IlanId == ılan.IlanId)
+                        {
+
+                                foreach (var rsm in ViewBag.image)
+                                {
+
+                                    if (rsm.IlanId == kiralık.IlanId)
+                                    {
+                                        if (@d == 1)
+                                        {
+
+                                            <a href="~/Home/Detay/@kiralık.IlanId"> <img src="~/Content/@rsm.ResimAd" style="height:250px;" alt="..."></a>
+                                        d++;
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+                    <div class="col-md-4 animate-box">
+                        <a href="#" class="property" >
+                            <span class="status">Sale</span>
+                            <div class="prop-details">
+                                <span class="price">$ @ılan.Fiyat  </span>
+                                <h3>@ılan.Mahalle.MahalleAd</h3>
+
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>*@
+
+
+<div id="properties" class="section-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box ">
+                <h3 class="icon-list">  EMLAK İLANLARIMIZ</h3>
+                <p>Güvenilir ev,arsa,dükkan sahibi olmanız için sitemizi ziyaret edebilirsiniz.</p>
+            </div>
+        </div>
+       
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+
+
+                var c = 1;
+                <div class="col-md-4 animate-box" >
+                    <div class="property" style="border: groove">
+                        @foreach (var rsm in ViewBag.image)
+                        {
+                            if (rsm.IlanId == item.IlanId)
+                            {
+                                if (@c == 1)
+                                {
+
+                                    <a href="~/Home/Detay/@item.IlanId"> <img src="~/Content/@rsm.ResimAd" style="height:250px;width:355px;" alt="..."></a>
+
+                                    c++;
+                                }
+                            }
+                        }
+
+                    <div class="property-details" style=" background-color: #edffa1">
+                        <b><span class="address"><i class="icon-home"><b style="color:darkblue;font-size:20px;margin-left:25px;">@item.Tip.Durum.DurumAd & @item.Tip.TipAd</b></i><h4 style="margin-left:15px;">  @item.Adres</h4></span></b>
+                        <span style="margin-left:10px;font-size:22px;" class="badge bg-dark">₺  @item.Fiyat.000 </span>
+                        <p style="margin-left:10px;color:blue"><b>@item.Mahalle.Semt.Sehir.SehirAd  & @item.Mahalle.Semt.SemtAd</b></p>
+                        <a href="#" class="list-group">
+
+
+                            <b>
+                                <b style="color:black" class="icon-home2">    @item.OdaSayısı Oda</b>
+
+                                <b style="color:black" class="icon-water">  @item.BanyoSayısı Banyo</b>
+
+
+                                <b style="color:black" class="icon-back-in-time"> @item.Tarih.ToString()</b>
+                                <br />
+                            </b>
+
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+
+@Html.Partial("Kiralık")
+
+<div id="fh5co-blog-section" class="fh5co-section-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <h3>Site hakkında yorumlar</h3>
+                <p>Türkiye geneli ev,arsa,dükkkan ilanlarınız için kullanabilen yaygın emlak siteniz...</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-bottom-padded-md">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="fh5co-blog animate-box">
+                    <a href="#"><img class="img-responsive" src="images/property-4.jpg" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3><a href="#">Properties for sale</a></h3>
+                            <span class="posted_by">Sep. 15th</span>
+                            <span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p><a href="#">Learn More...</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="fh5co-blog animate-box">
+                    <a href="#"><img class="img-responsive" src="images/property-2.jpg" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3><a href="#">Modern Home</a></h3>
+                            <span class="posted_by">Sep. 15th</span>
+                            <span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p><a href="#">Learn More...</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="fh5co-blog animate-box">
+                    <a href="#"><img class="img-responsive" src="images/property-3.jpg" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3><a href="#">15% Deal Discount For House</a></h3>
+                            <span class="posted_by">Sep. 15th</span>
+                            <span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p><a href="#">Learn More...</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix visible-md-block"></div>
+        </div>
+    </div>
+</div>
+<!-- fh5co-blog-section -->
+@*<div id="fh5co-contact" class="fh5co-contact">
+    <div class="half-contact">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 text-center heading-section animate-box">
+                    <h3>Ask an agent, We're here to help 24/7</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 animate-box">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="submit" value="Send Message" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="half-bg" style="background-image: url(images/cover_bg_2.jpg);"></div>
+</div>*@

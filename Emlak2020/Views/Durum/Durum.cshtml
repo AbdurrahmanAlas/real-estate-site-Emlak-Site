@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Emlak2020.Models.Durum>
+<b style="color:white;font-size:16px;"><a href="/Home/Index/" style="color:white">◈ ANASAYFA</a></b>
+<br />
+<br />
+@foreach (var item in Model)
+{
+
+
+
+    <a href="/Home/DurumList/@item.DurumId" style="font-family:Ebrima;font-size:15px;color:blue">
+
+        <b style="color:white">   ➤ @item.DurumAd YAPAN FİRMALAR</b>
+        <br />
+        <br />
+
+    </a>
+
+
+
+}

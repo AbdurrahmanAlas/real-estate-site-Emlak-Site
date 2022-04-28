@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Emlak2020.Models.Ilan>
+
+@{ int i = 0;}
+@foreach (var item in Model)
+        {
+
+            i++;
+            var c = 1;
+            var active = i == 1 ? "active" : "";
+<div class="item @active">
+
+
+    @foreach (var rsm in ViewBag.image)
+    {
+        if (rsm.IlanId == item.IlanId)
+
+        {
+            if (@c == 1)
+            {
+
+    <a href="/Home/Detay/@item.IlanId" >
+
+        <h2 id="fh5co-logo"><a href="/Home/Index"><i class="icon-home"></i>DOĞA<span>EMLAK</span><i class="icon-home"></i> <b style="margin-left:300px;"> @item.Fiyat  ₺</b>             </a></h2>
+        <a href="/Home/Detay/@item.IlanId">
+            <img src="~/Content/@rsm.ResimAd" style="width:780px;height:450px; border:outset" alt="..." >
+            </a>
+        </a>
+                
+                 
+                    @*<p>Güvenilir ev,arsa,dükkan sahibi olmanız için sitemizi ziyaret edebilirsiniz.</p>*@
+                
+                <div class="carousel-caption">
+                    @*<h2 style="font-size:30px; margin-left:1px;"  class="btn btn-primary">@item.Fiyat <h2/>*@
+                    @*<h1 style="font-size:40px;"  class="btn btn-success">@item.Fiyat ₺</h1>*@
+                </div>
+                c++;
+            }
+        }
+    }
+
+
+</div>
+
+
+}

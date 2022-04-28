@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Emlak2020.Models.Ilan>
+@{
+    ViewBag.Title = "Search";
+}
+@*<h2 style="background-color:#2283c3;color:white">
+
+    <img src="~/Content/asd.png" alt="news image" class="img-fluid navimg" style="width:80px;height:80px;"><b style="margin-left:100px;">
+        ►  HAFRİYAT KAZI VE DOLGU YERLERİ OTOMASYONU
+    </b>
+
+</h2>*@
+
+@*<br />
+<h2 class="btn btn-secondary" style="background-color:white;color:black;margin-left:300px;font-size:18px; "><b>►   ADRESE GÖRE KAZI DOLGU KAYITLARI </b></h2>
+<br />*@
+<div class="container">
+
+
+    <br />
+    <br />
+    <div class="row">
+
+
+
+        <!--ilan listesi-->
+        <br />
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+
+
+                var c = 1;
+                <div class="col-md-4 animate-box">
+                    <div class="property">
+                        @foreach (var rsm in ViewBag.image)
+                        {
+                            if (rsm.IlanId == item.IlanId)
+                            {
+                                if (@c == 1)
+                                {
+
+                                    <a href="~/Home/Detay/@item.IlanId"> <img src="~/Content/@rsm.ResimAd" style="height:250px;width:360px;" alt="..."></a>
+
+                                    c++;
+                                }
+                            }
+                        }
+
+                        <div class="property-details" style="border:unset;background-color:#f2edc6">
+                            <b><span class="address"><i class="icon-home"><b style="color:darkblue;font-size:20px;margin-left:25px;">@item.Tip.Durum.DurumAd & @item.Tip.TipAd</b></i><h4 style="margin-left:15px;">  @item.Adres</h4></span></b>
+                            <span style="margin-left:10px;font-size:22px;" class="badge bg-success">₺  @item.Fiyat.000 </span>
+                            <p style="margin-left:10px;color:black">@item.Mahalle.Semt.Sehir.SehirAd  & @item.Mahalle.Semt.SemtAd</p>
+                            <a href="#" class="list-group">
+
+
+                                <b>
+                                    <b style="color:darkslategray" class="icon-home2">    @item.OdaSayısı Oda</b>
+
+                                    <b style="color:darkslategray" class="icon-water">  @item.BanyoSayısı Banyo</b>
+
+
+                                    <b style="color:darkslategrey" class="icon-back-in-time"> @item.Tarih.ToString()</b>
+                                    <br />
+                                </b>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+

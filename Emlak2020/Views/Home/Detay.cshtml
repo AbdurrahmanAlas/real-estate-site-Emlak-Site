@@ -1,0 +1,270 @@
+﻿
+@model Emlak2020.Models.Ilan
+@{
+    ViewBag.Title = "Detay";
+}
+<br />
+
+<br />
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4" style="border:unset">
+            <table class="table table-bordered" style="color:black">
+                <tbody>
+
+
+
+
+                    <tr> <th colspan="2" style="color:blue;font-size:16px;">İLAN DETAYLARI</th> </tr>
+
+
+
+
+
+
+
+
+                    <tr style="font-size:14px;">
+                        <td><strong>Adres Konum</strong></td>
+                        <td><a href="@Model.Açıklama"><b>💡 ADRESE GİT</b></a></td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Alan(m2)</strong></td>
+                        <td>@Model.Alan</td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Fiyat</strong></td>
+                        <td style="font-size:18px; color:red"><b>@Model.Fiyat ₺</b></td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Durum</strong></td>
+                        <td>@Model.Tip.Durum.DurumAd</td>
+                    </tr>
+                    @*<tr>
+
+
+
+
+                        <td><strong>Alan</strong></td>
+                        <td>@Model.Alan m<sup>2</sup></td>
+
+                    </tr>*@
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Oda Sayısı</strong></td>
+                        <td>@Model.OdaSayısı  </td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Banyo Sayısı</strong></td>
+                        <td>@Model.BanyoSayısı  m<sup>3</sup></td>
+                    </tr>
+
+                  
+                    @*<tr>
+
+
+
+
+                        <td><strong>Kat</strong></td>
+                        <td>@Model.Kat</td>
+                    </tr>*@
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Adres </strong></td>
+                        <td>@Model.Adres</td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Mahalle</strong></td>
+                        <td>@Model.Mahalle.MahalleAd</td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Semt</strong></td>
+                        <td>@Model.Mahalle.Semt.SemtAd</td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Şehir</strong></td>
+                        <td>@Model.Mahalle.Semt.Sehir.SehirAd</td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Aidat</strong></td>
+                        <td>@Model.Aidat</td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>İlan Tarihi</strong></td>
+                        <td> @Convert.ToDateTime(Model.Tarih).ToString("dd/MM/yyyy")</td>
+                    </tr>
+
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Kredi uygunmu</strong></td>
+                        <td style="font-size:15px;">
+
+                            @if (Model.Kredi == true)
+                            {
+                                <label class="label label-success" style="color:white">EVET</label>
+
+
+                            }
+                            else
+                            {
+                                <label class="label label-danger" style="color:white">HAYIR</label>
+
+
+                            }
+                        </td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Site içerisi</strong></td>
+                        <td style="font-size:15px;">
+
+                            @if (Model.Sitede == true)
+                            {
+                                <label class="label label-success" style="color:white">EVET</label>
+
+
+                            }
+                            else
+                            {
+                                <label class="label label-danger" style="color:white">HAYIR</label>
+
+
+                            }
+                        </td>
+                    </tr>
+                    <tr style="font-size:14px;">
+
+
+
+
+                        <td><strong>Takas var mı?<strong></td>
+                        <td style="font-size:15px;">
+
+                            @if (Model.Takas == true)
+                            {
+                                <label class="label label-success" style="color:white">EVET</label>
+
+
+                            }
+                            else
+                            {
+                                <label class="label label-danger" style="color:white">HAYIR</label>
+
+
+                            }
+                        </td>
+                    </tr>
+                    <tr style="font-size:16px;">
+
+
+
+
+                        <td style="font-size:16px;"><strong>Telefon</strong></td>
+                        <td style="font-size:17px;"><button class="btn btn-success btn-block"><b style="font-size:16px;">📞 @Model.Telefon</b></button></td>
+                    </tr>
+                </tbody>
+
+
+
+            </table>
+
+
+
+
+
+        </div>
+        <!--slider-->
+        <div class=" col-md-8" style="border:inherit">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+
+                    @{ int i = 0;}
+                    @foreach (var item in ViewBag.image)
+                    {
+
+                        i++;
+                        var active = i == 1 ? "active" : "";
+
+                        <div class="item @active">
+                            <img src="/Content/@item.ResimAd" style="width:1150px;height:650px;" alt="...">
+
+                        </div>
+                    }
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+

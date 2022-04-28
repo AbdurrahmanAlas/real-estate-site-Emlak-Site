@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Emlak2020.Models.Ilan>
+@{
+    ViewBag.Title = "Filtre";
+}
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box ">
+       <br /> <h3 class="icon-search" style="font-size:30PX;"> BULUNAN İLANLAR</h3>
+        
+    </div>
+</div>
+<div class="container">
+
+
+   
+    <div class="row">
+
+
+
+        <!--ilan listesi-->
+        <br />
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+
+
+                var c = 1;
+                <div class="col-md-4 animate-box">
+                    <div class="property">
+                        @foreach (var rsm in ViewBag.image)
+                        {
+                            if (rsm.IlanId == item.IlanId)
+                            {
+                                if (@c == 1)
+                                {
+
+                                    <a href="~/Home/Detay/@item.IlanId"> <img src="~/Content/@rsm.ResimAd" style="height:250px;width:360px;" alt="..."></a>
+
+                                    c++;
+                                }
+                            }
+                        }
+
+                        <div class="property-details" style="border:unset;background-color:#f2edc6">
+                            <b><span class="address"><i class="icon-home"><b style="color:darkblue;font-size:20px;margin-left:25px;">@item.Tip.Durum.DurumAd & @item.Tip.TipAd</b></i><h4 style="margin-left:15px;">  @item.Adres</h4></span></b>
+                            <span style="margin-left:10px;font-size:22px;" class="badge bg-success">₺  @item.Fiyat.000 </span>
+                            <p style="margin-left:10px;color:black">@item.Mahalle.Semt.Sehir.SehirAd  & @item.Mahalle.Semt.SemtAd</p>
+                            <a href="#" class="list-group">
+
+
+                                <b>
+                                    <b style="color:darkslategray" class="icon-home2">    @item.OdaSayısı Oda</b>
+
+                                    <b style="color:darkslategray" class="icon-water">  @item.BanyoSayısı Banyo</b>
+
+
+                                    <b style="color:darkslategrey" class="icon-back-in-time"> @item.Tarih.ToString()</b>
+                                    <br />
+                                </b>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+

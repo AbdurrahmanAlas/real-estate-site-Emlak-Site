@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Emlak2020.Models.Ilan>
+@{
+    ViewBag.Title = "DurumList";
+}
+<div class="container">
+
+
+    <br />
+    <br />
+    <div class="row">
+
+
+
+        <!--ilan listesi-->
+        <br />
+        @foreach (var item in Model)
+        {
+            var c = 1;
+
+
+
+            <div class="col-sm-6 col-md-4 " style="border:inset;background-color:#e4d66d">
+                <br />
+                <p class="badge badge-primary icon-address" style="background-color:blue;font-size:17px;">  @item.Mahalle.Semt.SemtAd-@item.Mahalle.MahalleAd  --  @item.Fiyat ₺  </p>
+
+                <br /><b class="badge badge-primary icon-plus " style="background-color:darkred;font-size:13px;"> ALAN:@item.Alan  m<sup>2</sup>   </b><b style="color:black;font-size:15px;"> Tarih:@Convert.ToDateTime(item.Tarih).ToString("dd/MM/yyyy")</b>
+
+                <div class="thumbnail">
+                    @foreach (var rsm in ViewBag.image)
+                    {
+                        if (rsm.IlanId == item.IlanId)
+                        {
+                            if (@c == 1)
+                            {
+
+                                <a href="~/Home/Detay/@item.IlanId"> <img src="~/Content/@rsm.ResimAd" style="height:250px;width:340px;" alt="..."></a>
+
+                                c++;
+                            }
+                        }
+                    }
+
+                    <div class="caption ">
+                        <p><strong style="color:darkblue" class="icon-home"> @item.Tip.Durum.DurumAd</strong>(@item.Tip.TipAd)<a class="badge badge-primary" style="font-size:12px;background-color:green; color:white" href="@item.Açıklama"><b>💡AdreseGit</b></a></p>
+
+                        <p>
+                            <b style="color:black" class="icon-home"> Oda  </b> <b style="color:black">@item.OdaSayısı </b>
+
+                            <br />
+                            <b style="color:black" class="icon-water"> Banyo Sayısı: </b><b style="color:black">@item.BanyoSayısı         </b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
+

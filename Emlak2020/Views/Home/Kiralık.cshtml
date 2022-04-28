@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Emlak2020.Models.Ilan>
+
+
+<div id="fh5co-about" class="fh5co-agent">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <h3>KİRALIK İLANLAR</h3>
+                <p>Ev kiralamak çok kolay ve pratik</p>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                var c = 1;
+                <div class="col-sm-3 text-center animate-box" data-animate-effect="fadeIn">
+                    <div class="fh5co-staff">
+
+                        <div class="col-md-6 animate-box">
+                            <div class="property">
+                                @foreach (var rsm in ViewBag.image)
+                                {
+                                    if (rsm.IlanId == item.IlanId)
+                                    {
+                                        if (@c == 1)
+                                        {
+
+                                            <a href="~/Home/Detay/@item.IlanId"> <img src="~/Content/@rsm.ResimAd" style="height:250px;width:250px;" alt="..."></a>
+
+                                            c++;
+                                        }
+                                    }
+                                }
+                                <h3 style="margin-left:50px;"> @item.Mahalle.Semt.SemtAd-@item.Mahalle.MahalleAd @item.Tip.Durum.DurumAd</h3>
+                                <h3 style="margin-left:70px;">
+                                    @item.Fiyat₺
+                                </h3>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            }
+            <p class="social-icons">
+
+                <a href="#"><i class="icon-facebook2"></i></a>
+                <a href="#"><i class="icon-instagram"></i></a>
+
+                <a href="#"><i class="icon-youtube"></i></a>
+            </p>
+        </div></div></div>
+       
